@@ -150,7 +150,7 @@ import Navbar from "@/components/navbar/Navbar";
 
 return (
   <html lang="en" suppressHydrationWarning>
-    <body className={inter.className}>
+    <body className={geistSans.className}>
       <Navbar />
       <main className="container py-10">{children}</main>
     </body>
@@ -226,7 +226,7 @@ import Providers from "./providers";
 
 return (
   <html lang="en" suppressHydrationWarning>
-    <body className={inter.className}>
+    <body className={geistSans.className}>
       <Providers>
         <Navbar />
         <main className="container py-10">{children}</main>
@@ -433,7 +433,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 return (
   <ClerkProvider>
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={geistSans.className}>
         <Providers>
           <Navbar />
           <main className="container py-10">{children}</main>
