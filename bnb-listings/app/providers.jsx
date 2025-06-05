@@ -1,19 +1,22 @@
-"use client";
+'use client';
 
-import { ThemeProvider } from "./theme-provider";
+import { ThemeProvider } from './theme-provider';
+import { Toaster } from 'sonner';
 
 function Providers({ children }) {
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
-      {children}
-    </ThemeProvider>
+    <>
+      <Toaster />
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+        {children}
+      </ThemeProvider>
+    </>
   );
 }
 
-export default Providers;
-
+export default Providers;
