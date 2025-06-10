@@ -1,9 +1,8 @@
-// server.js
 const { createServer } = require("http");
 const { parse } = require("url");
 const next = require("next");
 
-const port = process.env.PORT || 3000;
+const port = parseInt(process.env.PORT, 10) || 3000;
 const app = next({ dev: false });
 const handle = app.getRequestHandler();
 
@@ -15,4 +14,9 @@ app.prepare().then(() => {
     if (err) throw err;
     console.log(`> Ready on http://localhost:${port}`);
   });
+});
+
+process.on("unhandledRejection", (reason) => {
+  console.error("Unhandled Rejection:", reason);
+  process.exit(1);
 });
